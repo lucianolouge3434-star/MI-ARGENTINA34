@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">A</div>
+                <span>Mi App</span>
+            </div>
+
+            <nav>
+                <button class="menu-item active" onclick="mostrarPagina('inicio')">
+                    🏠 Inicio
+                </button>
+
+                <button class="menu-item" onclick="mostrarPagina('movimientos')">
+                    💳 Movimientos
+                </button>
+
+                <button class="menu-item" onclick="mostrarPagina('estadisticas')">
+                    📊 Estadísticas
+                </button>
+
+                <button class="menu-item" onclick="mostrarPagina('ajustes')">
+                    ⚙️ Ajustes
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>App experimental</p>
+                <small>Versión 1.0</small>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO -->
+        <main class="content">
+
+            <!-- INICIO -->
+            <section id="inicio" class="page active-page">
+
+                <header>
+                    <div>
+                        <p class="small-title">Bienvenido</p>
+                        <h1>Mi panel</h1>
+                    </div>
+
+                    <button class="profile">LU</button>
+                </header>
+
+
+                <!-- SALDO -->
+                <div class="balance-card">
+
+                    <div>
+                        <p>Saldo disponible</p>
+
+                        <h2 id="saldo">$125.450</h2>
+                    </div>
+
+                    <div class="balance-icon">
+                        $
+                    </div>
+
+                </div>
+
+
+                <!-- TARJETAS -->
+                <div class="cards">
+
+                    <div class="info-card">
+                        <span>Ingresos</span>
+                        <strong class="green">$250.000</strong>
+                        <small>Este mes</small>
+                    </div>
+
+                    <div class="info-card">
+                        <span>Gastos</span>
+                        <strong class="red">$124.550</strong>
+                        <small>Este mes</small>
+                    </div>
+
+                    <div class="info-card">
+                        <span>Movimientos</span>
+                        <strong>24</strong>
+                        <small>Registrados</small>
+                    </div>
+
+                </div>
+
+
+                <!-- MOVIMIENTOS -->
+                <div class="section-title">
+
+                    <div>
+                        <h3>Últimos movimientos</h3>
+                        <p>Tus movimientos recientes</p>
+                    </div>
+
+                    <button onclick="mostrarPagina('movimientos')">
+                        Ver todos
+                    </button>
+
+                </div>
+
+
+                <div class="movements">
+
+                    <div class="movement">
+                        <div class="movement-icon red-bg">🛒</div>
+
+                        <div class="movement-info">
+                            <strong>Supermercado</strong>
+                            <small>Hoy · 18:32</small>
+                        </div>
+
+                        <strong class="red">-$25.500</strong>
+                    </div>
+
+
+                    <div class="movement">
+                        <div class="movement-icon green-bg">💰</div>
+
+                        <div class="movement-info">
+                            <strong>Ingreso</strong>
+                            <small>Ayer · 14:20</small>
+                        </div>
+
+                        <strong class="green">+$80.000</strong>
+                    </div>
+
+
+                    <div class="movement">
+                        <div class="movement-icon red-bg">🎮</div>
+
+                        <div class="movement-info">
+                            <strong>Videojuegos</strong>
+                            <small>20 Ago · 22:10</small>
+                        </div>
+
+                        <strong class="red">-$18.900</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- MOVIMIENTOS -->
+            <section id="movimientos" class="page">
+
+                <h1>Movimientos</h1>
+
+                <p class="subtitle">
+                    Historial de movimientos
+                </p>
+
+                <div class="movements">
+
+                    <div class="movement">
+                        <div class="movement-icon red-bg">🛒</div>
+
+                        <div class="movement-info">
+                            <strong>Supermercado</strong>
+                            <small>23 Ago 2026</small>
+                        </div>
+
+                        <strong class="red">-$25.500</strong>
+                    </div>
+
+                    <div class="movement">
+                        <div class="movement-icon green-bg">💰</div>
+
+                        <div class="movement-info">
+                            <strong>Ingreso</strong>
+                            <small>22 Ago 2026</small>
+                        </div>
+
+                        <strong class="green">+$80.000</strong>
+                    </div>
+
+                    <div class="movement">
+                        <div class="movement-icon red-bg">🎮</div>
+
+                        <div class="movement-info">
+                            <strong>Videojuegos</strong>
+                            <small>20 Ago 2026</small>
+                        </div>
+
+                        <strong class="red">-$18.900</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ESTADÍSTICAS -->
+            <section id="estadisticas" class="page">
+
+                <h1>Estadísticas</h1>
+
+                <p class="subtitle">
+                    Resumen de tu actividad
+                </p>
+
+                <div class="chart">
+
+                    <div class="bar" style="height:40%"></div>
+                    <div class="bar" style="height:65%"></div>
+                    <div class="bar" style="height:50%"></div>
+                    <div class="bar" style="height:80%"></div>
+                    <div class="bar" style="height:60%"></div>
+                    <div class="bar" style="height:90%"></div>
+                    <div class="bar" style="height:70%"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- AJUSTES -->
+            <section id="ajustes" class="page">
+
+                <h1>Ajustes</h1>
+
+                <p class="subtitle">
+                    Configuración de la aplicación
+                </p>
+
+                <div class="settings">
+
+                    <div class="setting">
+                        <div>
+                            <strong>Modo oscuro</strong>
+                            <small>Cambiar apariencia</small>
+                        </div>
+
+                        <button onclick="cambiarTema()" class="toggle">
+                            🌙
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
